@@ -10,13 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170509122505) do
+ActiveRecord::Schema.define(version: 20170509123708) do
 
   create_table "idps", force: :cascade do |t|
     t.string "simple_id"
     t.boolean "enabled"
     t.string "entity_id"
     t.string "signing_cert"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "r_transactions", force: :cascade do |t|
+    t.string "simple_id"
+    t.boolean "eidas_enabled"
+    t.string "entity_id"
+    t.string "signing_cert"
+    t.string "levels_of_assurance"
+    t.string "assertion_consumer_service_uri"
+    t.string "service_homepage"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

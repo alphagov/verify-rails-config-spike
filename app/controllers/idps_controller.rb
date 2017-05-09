@@ -15,7 +15,7 @@ class IdpsController < ApplicationController
   end
 
   def show
-    @idp = Idp.find_by entity_id: params[:id]
+    @idp = Idp.find_by entity_id: URI.unescape(params[:id])
     render plain: @idp.inspect
   end
 
@@ -26,7 +26,7 @@ class IdpsController < ApplicationController
   end
 
   def destroy
-    @idp = Idp.find_by entity_id: params[:id]
+    @idp = Idp.find_by entity_id: URI.unescape(params[:id])
     @idp.destroy
   end
 

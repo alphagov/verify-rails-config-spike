@@ -1,0 +1,2 @@
+class RTransaction < ApplicationRecord
+end
