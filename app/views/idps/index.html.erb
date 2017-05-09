@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>entity_id</th>
-    <th>display_data</th>
+    <th>simple_id</th>
     <th>enabled</th>
     <th colspan="3"></th>
   </tr>
@@ -11,7 +11,7 @@
   <% @idps.each do |idp| %>
       <tr>
         <td><%= idp.entity_id %></td>
-        <td><%= idp.display_data %></td>
+        <td><%= idp.simple_id %></td>
         <td><%= idp.enabled %></td>
         <td><%= link_to 'Show', idp_path(url_encode idp.entity_id) %></td>
         <td><%= link_to 'Edit', edit_idp_path(url_encode idp.entity_id) %></td>

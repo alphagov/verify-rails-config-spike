@@ -1,0 +1,1 @@
+./bin/rails generate model Idp simple_id:string enabled:boolean entity_id:string signing_cert:string --force

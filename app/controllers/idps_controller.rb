@@ -11,7 +11,7 @@ class IdpsController < ApplicationController
     @idp = Idp.new idp_params
 
     @idp.save
-    redirect_to @idp
+    redirect_to idps_path
   end
 
   def show
@@ -22,7 +22,7 @@ class IdpsController < ApplicationController
   def all
     # return a collection of all idp entityIds
     @idps = Idp.all.select("entity_id").map(&:entity_id)
-    render json: @idps # 'http://stub_idp.acme.org/stub-idp-two/SSO/POST'
+    render json: @idps
   end
 
   def destroy
@@ -33,6 +33,6 @@ class IdpsController < ApplicationController
   private
 
   def idp_params
-    params.require(:idp).permit(:entity_id, :display_data, :enabled)
+    params.require(:idp).permit(:entity_id, :simple_id, :display_data, :enabled)
   end
 end

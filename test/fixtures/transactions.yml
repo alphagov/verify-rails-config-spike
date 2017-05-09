@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  simple_id: MyString
+  eidas_enabled: false
+  entity_id: MyString
+  signing_cert: MyString
+  levels_of_assurance: MyString
+  assertion_consumer_service_uri: MyString
+  service_homepage: MyString
+
+two:
+  simple_id: MyString
+  eidas_enabled: false
+  entity_id: MyString
+  signing_cert: MyString
+  levels_of_assurance: MyString
+  assertion_consumer_service_uri: MyString
+  service_homepage: MyString

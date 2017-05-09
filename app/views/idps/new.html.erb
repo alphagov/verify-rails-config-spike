@@ -2,17 +2,22 @@
 <%= form_for :idp, url: idps_path do |f| %>
     <p>
       <%= f.label :entity_id %><br>
-      <%= f.text_field :entity_id %>
+      <%= f.text_field :entity_id, value: 'http://stub_idp.acme.org/stub-idp-two/SSO/POST' %>
     </p>
 
     <p>
-      <%= f.label :display_data %><br>
-      <%= f.text_area :display_data %>
+      <%= f.label :simple_id %><br>
+      <%= f.text_area :simple_id, value: 'stub-idp-two' %>
+    </p>
+
+    <p>
+      <%= f.label :signing_cert %><br>
+      <%= f.text_area :signing_cert, value: '' %>
     </p>
 
     <p>
       <%= f.label :enabled %><br>
-      <%= f.check_box :enabled %>
+      <%= f.check_box :enabled, checked: true %>
     </p>
 
     <p>

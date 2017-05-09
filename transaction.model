@@ -1,0 +1,1 @@
+./bin/rails generate model Transaction simple_id:string eidas_enabled:boolean entity_id:string signing_cert:string levels_of_assurance:string assertion_consumer_service_uri:string service_homepage:string

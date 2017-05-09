@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  display_data: MyText
+  simple_id: MyString
   enabled: false
   entity_id: MyString
+  signing_cert: MyString
 
 two:
-  display_data: MyText
+  simple_id: MyString
   enabled: false
   entity_id: MyString
+  signing_cert: MyString
