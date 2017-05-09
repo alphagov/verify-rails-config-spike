@@ -1,0 +1,2 @@
+module TransactionsEidasEnabledHelper
+end
