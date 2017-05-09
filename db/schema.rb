@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170509123708) do
+ActiveRecord::Schema.define(version: 20170509154227) do
 
   create_table "idps", force: :cascade do |t|
     t.string "simple_id"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170509123708) do
     t.string "levels_of_assurance"
     t.string "assertion_consumer_service_uri"
     t.string "service_homepage"
+    t.string "matching_service_entity_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

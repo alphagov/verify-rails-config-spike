@@ -8,6 +8,7 @@ one:
   levels_of_assurance: MyString
   assertion_consumer_service_uri: MyString
   service_homepage: MyString
+  matching_service_entity_id: MyString
 
 two:
   simple_id: MyString
@@ -17,3 +18,4 @@ two:
   levels_of_assurance: MyString
   assertion_consumer_service_uri: MyString
   service_homepage: MyString
+  matching_service_entity_id: MyString

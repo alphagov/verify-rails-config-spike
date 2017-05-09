@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>entity_id</th>
+    <th>matching_service_entity_id</th>
     <th>simple_id</th>
     <th>levels_of_assurance</th>
     <th>assertion_consumer_service_uri</th>
@@ -15,6 +16,7 @@
   <% @transactions.each do |transaction| %>
       <tr>
         <td><%= transaction.entity_id %></td>
+        <td><%= transaction.matching_service_entity_id %></td>
         <td><%= transaction.simple_id %></td>
         <td><%= transaction.levels_of_assurance %></td>
         <td><%= transaction.assertion_consumer_service_uri %></td>

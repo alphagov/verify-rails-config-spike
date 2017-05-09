@@ -25,7 +25,7 @@ class TransactionsController < ApplicationController
   private
 
   def transaction_params
-    params.require(:transaction).permit(:entity_id, :simple_id, :levels_of_assurance, :assertion_consumer_service_uri, :signing_cert, :service_homepage, :eidas_enabled)
+    params.require(:transaction).permit(:entity_id, :matching_service_entity_id, :simple_id, :levels_of_assurance, :assertion_consumer_service_uri, :signing_cert, :service_homepage, :eidas_enabled)
   end
 
 end
