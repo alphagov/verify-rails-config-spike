@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  display_data: MyText
+  enabled: false
+  entity_id: MyString
+
+two:
+  display_data: MyText
+  enabled: false
+  entity_id: MyString

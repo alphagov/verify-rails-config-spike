@@ -1,0 +1,2 @@
+class Idp < ApplicationRecord
+end

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :idps, path: '/config/idps' do
     resources :idp_display_data, path: '/display-data', only: [:index]
+    resources :idp_enabled, path: '/enabled', only: [:index]
   end
   resources :transactions, path: '/config/transactions' do
     resources :transactions_display_data, path: '/display-data', only: [:index]
