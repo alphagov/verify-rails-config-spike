@@ -36,6 +36,11 @@ We'll work in the same room and will break to talk about it every hour, with a w
 * entityIds are url encoded into the path param - you'll need to deal with that
 * in this challenge there is no need to consume the existing YAML
 
+### Pre-requisites
+
+* Ruby installed and ready to go
+* Best to have a local copy of hub to run your `config` against (you could write a service without testing it though)
+
 ### Spoilers
 
 <details>
