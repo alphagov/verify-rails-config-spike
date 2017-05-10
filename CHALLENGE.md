@@ -24,6 +24,7 @@ Rails has an excellent [getting started guide](http://guides.rubyonrails.org/get
 You'll want to make:
 * User interface to add/view/delete transactions + identity providers
 * Models to represent transactions + identity providers
+* Controllers and Views to process requests for information
 
 **Note:** do not call the model Transaction[s], it conflicts with Rails internals
 
@@ -33,7 +34,7 @@ We'll work in the same room and will break to talk about it every hour, with a w
 
 * most calls to config use path params, notably one doesn't, but if you just ignore that for now you will still be able to progress
 * entityIds are url encoded into the path param - you'll need to deal with that
-* 
+* in this challenge there is no need to consume the existing YAML
 
 ### Spoilers
 
@@ -100,6 +101,10 @@ We'll work in the same room and will break to talk about it every hour, with a w
   <summary>Spoiler: here is a `routes.rb` file that may help</summary>
   <p>
   
+  <details>
+    <summary>are you really sure that you don't want to try and do this yourself first?</summary>
+    <p>
+    
 ```ruby
 Rails.application.routes.draw do
 
@@ -124,6 +129,7 @@ Rails.application.routes.draw do
   root 'config#index'
 end
 ```
+</details>
 </details>
 
 <details>
