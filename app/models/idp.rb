@@ -1,2 +1,0 @@
-class Idp < ApplicationRecord
-end
