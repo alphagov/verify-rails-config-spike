@@ -154,3 +154,41 @@ end
 `./bin/rails generate model Idp simple_id:string enabled:boolean entity_id:string signing_cert:string`
 </details>
 
+<details>
+  <summary>Spoiler: here is `routes.rb` along with details about what each should return</summary>
+  <p>
+   
+```ruby
+ Rails.application.routes.draw do
+ 
+   # render json: @idps
+   get 'config/idps/enabled' => 'idps#all'
+   resources :idps, path: '/config/idps', id: /[A-Za-z0-9%._-]+/ do
+     # render json: { simpleId: 'stub-idp-two', enabled: true, supportedLevelsOfAssurance: [ 'LEVEL_2' ], useExactComparisonType: false }
+     resources :idp_display_data, path: '/display-data', only: [:index]
+     # render json: { enabled: @idp.enabled }
+     resources :idp_enabled, path: '/enabled', only: [:index]
+   end
+ 
+   # render json: @transactions
+   get 'config/transactions/enabled' => 'transactions#all'
+   resources :transactions, path: '/config/transactions', id: /[A-Za-z0-9%._-]+/ do
+     # render json: { simpleId: @transaction.simple_id, loaList: [ @transaction.levels_of_assurance ], serviceHomepage: @transaction.service_homepage }
+     resources :transactions_display_data, path: '/display-data', only: [:index]
+     # render json: [ @transaction.levels_of_assurance ]
+     resources :transactions_levels_of_assurance, path: '/levels-of-assurance', only: [:index]
+     # render json: { target: @transaction.assertion_consumer_service_uri }
+     resources :transactions_assertion_consumer_service_uri, path: '/assertion-consumer-service-uri', only: [:index]
+     # render json: @transaction.eidas_enabled
+     resources :transactions_eidas_enabled, path: '/eidas-enabled', only: [:index]
+   end
+ 
+   resources :certificates, path: '/config/certificates', id: /[A-Za-z0-9%._-]+/ do
+     # render json: [{issuerId: entity_id, certificate: @entity.signing_cert, keyUse: 'SIGNING', federationEntityType: 'RP'}]
+     resources :certificates_signing, path: '/certs/signing', only: [:index]
+   end
+ 
+   root 'config#index'
+ end 
+ ```
+</details>
