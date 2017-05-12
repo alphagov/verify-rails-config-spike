@@ -2,6 +2,8 @@
 
 **Note:** this is very ambitious in the time we have
 
+**The tl;dr for doing this in the open is - do not put any of this on a public github repo**
+
 ## Background
 
 The Verify hub uses several microservices that are mainly Java/Dropwizard.  One of them is `config`.  `config` is used as the source of truth for hub federation configuration by all core hub microservices.  It is essentially a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) interface over some YAML files.  It used to have more responsibilities but they have reduced over time.  In some older design documents it hints that config would have a [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) interface.
@@ -35,6 +37,7 @@ We'll work in the same room and will break to talk about it every hour, with a w
 * most calls to config use path params, notably one doesn't, but if you just ignore that for now you will still be able to progress
 * entityIds are url encoded into the path param - you'll need to deal with that
 * in this challenge there is no need to consume the existing YAML
+* tl;dr for doing this in the open is - do not put any of this on a public github repo
 
 ### Pre-requisites
 
